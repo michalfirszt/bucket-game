@@ -1,0 +1,16 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "variables";
+
+body {
+  background-color: $body-bg;
+}
+
+.bucket {
+  background-color: $white;
+}
+
+.bucket:hover {
+  background-color: $light-blue;
+  cursor: pointer;
+}

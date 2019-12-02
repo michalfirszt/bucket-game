@@ -1,3 +1,21 @@
-<p>
-  bucket-game works!
-</p>
+<div class="row mt-5">
+  <div class="col-12">
+    <div class="bucket border mb-4 p-4 shadow"
+         *ngFor="let bucket of buckets"
+         (click)="transferBucket(bucket)"
+         [ngClass]="{'bg-info': bucket == selectedBucket}">
+
+        <div class="row mb-2 text-center">
+            <div class="col-6">
+                Max value: <strong>{{ bucket.max }}</strong>
+            </div>
+            <div class="col-6">
+                Current value: <strong>{{ bucket.value }}</strong>
+            </div>
+        </div>
+
+        <progress-bar [progress]="(bucket.value / bucket.max) * 100" [color]="'#0275d8'">
+        </progress-bar>
+    </div>
+  </div>
+</div>
