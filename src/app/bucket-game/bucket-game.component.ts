@@ -24,6 +24,10 @@ export class BucketGameComponent implements OnInit {
     this.selectedBucket = null;
   }
 
+  selectBucket(bucket) {
+    this.selectedBucket = bucket;
+  }
+
   transferBucket(bucket) {
 
     if (this.selectedBucket == null) {

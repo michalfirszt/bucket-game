@@ -1,9 +1,12 @@
 <div class="row mt-5">
   <div class="col-12">
-    <div class="bucket border mb-4 p-4 shadow"
+
+    <div mwlDraggable
+         mwlDroppable
+         class="bucket border mb-4 p-4 shadow"
          *ngFor="let bucket of buckets"
-         (click)="transferBucket(bucket)"
-         [ngClass]="{'bg-info': bucket == selectedBucket}">
+         (dragStart)="selectBucket(bucket)"
+         (drop)="transferBucket(bucket)">
 
         <div class="row mb-2 text-center">
             <div class="col-6">
