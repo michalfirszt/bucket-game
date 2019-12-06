@@ -6,13 +6,14 @@
          class="bucket border mb-4 p-4 shadow"
          *ngFor="let bucket of buckets"
          (dragStart)="selectBucket(bucket)"
-         (drop)="transferBucket(bucket)">
+         (drop)="transferBucket(bucket)"
+         [style.width]="(bucket.max * 10) + '%'">
 
-        <div class="row mb-2 text-center">
-            <div class="col-6">
+        <div class="row mb-2">
+            <div class="pl-5 pr-5">
                 Max value: <strong>{{ bucket.max }}</strong>
             </div>
-            <div class="col-6">
+            <div class="pl-5">
                 Current value: <strong>{{ bucket.value }}</strong>
             </div>
         </div>

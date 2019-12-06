@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Bucket } from './Bucket';
+import { Bucket } from '../Bucket';
 
 @Component({
   selector: 'app-bucket-game',
@@ -18,9 +18,9 @@ export class BucketGameComponent implements OnInit {
 
   ngOnInit() {
     this.buckets = [];
-    this.buckets.push(new Bucket(6, 6));
+    this.buckets.push(new Bucket(10, 10));
+    this.buckets.push(new Bucket(6, 0));
     this.buckets.push(new Bucket(4, 0));
-    this.buckets.push(new Bucket(2, 0));
     this.selectedBucket = null;
   }
 
